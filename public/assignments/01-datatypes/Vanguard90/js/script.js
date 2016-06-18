@@ -8,10 +8,8 @@
 let all = [12, 1238, 3724, 43, 89, 11, 32443287];
 
 let doubles = all.map(function (x){
-    if (x%2==0) {
+    if (x%2===0) {
         return x;
-    } else {
-        delete x;
     }
 });
 
@@ -22,22 +20,11 @@ console.log(doubles);
 /*
   We want to round the decimal below, write some code that rounds the decimal to 8 and 7
 */
+
 let decimal = 7.5;
 
-let x;
-
-let dummyText= function (x){
-    
-    while (decimal%2!=0) {
-    
-    let x = decimal+0.5;
-        
-    return x;
-}
-}
-console.log(dummyText);
-
-//I can't get this to work for some reason....
+let rounded = Math.round(decimal);
+console.log(rounded);
 
 /*
   In the following string replace 'and' with 'or'
@@ -51,7 +38,8 @@ str2[1] = "or";
 let str3 = str2.join(" ")
 
 console.log(str3);
-// I could've also done it with less variables, but this way still works.
+
+// To use replace, I have to use and know regular expressions. Example at MDN didn't help me much.
 
 
 /*
@@ -87,7 +75,7 @@ let toBeArray = 'I am the javascript king';
 
 let array = toBeArray.split(" ");
 
-array.splice(3,2, "javascriptking");
-//Removes two elements starting from index 3, add string.
+array.splice(-2,2, "javascriptking");
+//Removes two elements starting from index -2(3), add string.
 
 console.log(array);
